@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Videojuegos</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
-
+  {% load static %}
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/styles_portafolio.css">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
 
@@ -43,7 +42,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="super_smash_bros.html">
-          <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_CA/games/switch/s/super-smash-bros-ultimate-switch/hero" class="d-block w-100" alt="Super Smash Bros">
+          <img src="{% static 'images/super_smash_bros.jpg' %}" class="d-block w-100" alt="Super Smash Bros">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Super Smash Bros</h5>
@@ -51,7 +50,7 @@
       </div>
       <div class="carousel-item">
         <a href="fifa.html">
-          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/0515/BOwvC0Q9dfw6QhGvX9dd13Sr.jpg" class="d-block w-100" alt="FIFA">
+          <img src="{% static 'images/fifa.jpg' %}" class="d-block w-100" alt="FIFA">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>FIFA</h5>
@@ -59,7 +58,7 @@
       </div>
       <div class="carousel-item">
         <a href="call_of_duty.html">
-          <img src="https://images.hdqwalls.com/wallpapers/call-of-duty-mobile-50.jpg" class="d-block w-100" alt="Call Of Duty Mobile">
+          <img src="{% static 'images/call_of_duty.jpg' %}" class="d-block w-100" alt="Call Of Duty Mobile">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Call Of Duty Mobile</h5>
@@ -79,7 +78,7 @@
   <main class="container mt-4">
     <section id="about" class="section text-center">
       <h2 class="section-title">¿Quiénes Somos?</h2>
-      <p>TorneosGamingsRD es una comunidad apasionada por los videojuegos que ofrece un espacio único para jugadores de todos los niveles. Nos dedicamos a reunir a gamers de diferentes estilos y habilidades, brindándoles una plataforma donde pueden competir, mejorar sus destrezas y ganar premios emocionantes. Nuestro compromiso es fomentar un ambiente de competencia saludable, donde cada participante pueda disfrutar de torneos bien organizados, conocer a otros jugadores y poner a prueba sus habilidades en un entorno seguro y motivador.</p>
+      <p>TorneosGamingsRD es una comunidad apasionada por los videojuegos que ofrece un espacio único para jugadores de todos los niveles. Nos dedicamos a reunir a gamers de diferentes estilos y habilidades, brindándoles una plataforma donde pueden competir, mejorar sus destrezas y ganar premios emocionantes.</p>
     </section>
 
     <section id="achievements" class="section text-center">
@@ -90,7 +89,6 @@
             <div class="card-body">
               <h5 class="card-title">Más de 100 Torneos</h5>
               <p class="card-text">Organizamos torneos que reúnen a jugadores de todas partes.</p>
-              <span class="badge badge-primary">Logro Destacado</span>
             </div>
           </div>
         </div>
@@ -99,7 +97,6 @@
             <div class="card-body">
               <h5 class="card-title">5000+ Jugadores</h5>
               <p class="card-text">Contamos con una gran comunidad de jugadores activos.</p>
-              <span class="badge badge-warning">Crecimiento Exponencial</span>
             </div>
           </div>
         </div>
@@ -108,7 +105,6 @@
             <div class="card-body">
               <h5 class="card-title">Premios y Trofeos</h5>
               <p class="card-text">Más de $50,000 en premios distribuidos.</p>
-              <span class="badge badge-success">Recompensa</span>
             </div>
           </div>
         </div>
@@ -131,12 +127,12 @@
         <div class="col-md-6">
           <h5>Canal de YouTube</h5>
           <a href="https://www.youtube.com/@TorneosGamingsRD" target="_blank">
-            <img width="80%" height="400" src="https://yt3.ggpht.com/A0skT9iyWFUUvrlp0a7cJNLPq8Lm7KezBK-MhUdBhrpoORHW1cXiiVhbAq3s9ia5MAdudgNe=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Canal Youtube">
+            <img src="{% static 'images/fotoperfilyt.jpg' %}" alt="Canal Youtube" class="img-fluid">
           </a>        
         </div>
         <div class="col-md-6">
           <h5>Ubicación</h5>
-          <iframe width="100%" height="400" src="https://maps.google.com/maps?q=santo%20domingo&z=15&output=embed"></iframe>
+          <iframe width="100%" height="519" src="https://maps.google.com/maps?q=santo%20domingo&z=15&output=embed"></iframe>
         </div>
       </div>
     </section>
@@ -160,7 +156,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script src="javascript/scripts_portafolio.js"></script>
+  <script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
