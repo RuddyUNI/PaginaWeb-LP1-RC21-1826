@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
 </head>
 <body>
-    <h1>Productos de la Tienda de Ruddy</h1>
-    <ul>
-        {% for x in misProductos %}
-        <li>{{ x.codigoProducto }} {{ x.descripcionProducto }}</li>
-        {% endfor %}
-    </ul>
+    <header>
+        <h1>Tienda de Ruddy</h1>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <h2>Productos Disponibles</h2>
+        <ul>
+            {% for x in misProductos %}
+            <li>
+                <span class="codigo">{{ x.codigoProducto }}</span>
+                <span class="descripcion">{{ x.descripcionProducto }}</span>
+                <span class="estatus">{{ x.estatus }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- <script src="{% static 'js/cuandotengajs' %}"></script> -->
 </body>
 </html>
